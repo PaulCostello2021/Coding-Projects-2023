@@ -1,98 +1,75 @@
 
 
-function howOld()
-{
-    var age = document.getElementById("userAge").value;
-    var year = document.getElementById("year").value;
-    var currentYear = 2023;
 
-    let numYears = Number (year) - Number (currentYear);
-    let calAge = Number (age) + Number (numYears);
+
+
+function tipCalculator () {
+
+    var price = document.getElementById("mealPrice").value;
+    var quality = document.getElementById("serviceRating").value;
+
+    if (quality == 'Bad') {
+        let total = +price +  (5/100 * +price);
+        let tip = 5/100* +price;
+        console.log(total);
+        console.log(quality);
+        console.log(tip);
+
+        document.getElementById("mealCost").innerHTML = price;
+        document.getElementById("mealService").innerHTML = quality;
+        document.getElementById('mealTip').innerHTML = tip;
+        document.getElementById('totalMeal').innerHTML = total;
+
         
-        //     console.log("age =" ,age);
-        //     console.log( "year =  ",year);
-        //     console.log( "Current year =  ",currentYear);
-        //     console.log( "Current year - age =  ",currentYear -age );
 
-        //   console.log ( "numYears = ", numYears);
-        //   console.log("calAge =" ,calAge);
+    } else if (quality == 'Ok') {
+        let total = +price +  (15/100 * +price);
+        let tip = 15/100* +price;
+        console.log(total);
+        console.log(quality);
+        console.log(tip);
 
-          
+        document.getElementById("mealCost").innerHTML = price;
+        document.getElementById("mealService").innerHTML = quality;
+        document.getElementById('mealTip').innerHTML = tip;
+        document.getElementById('totalMeal').innerHTML = total;
+    } else  if (quality == 'Good') {
+        let total = +price +  (20/100 * +price);
+        let tip = 20/100* +price;
+        console.log(total);
+        console.log(quality);
+        console.log(tip);
 
-          if (year > currentYear && age != null && year != null) {
-            
-         document.getElementById("Display").innerHTML = `You will be ${calAge} in the year ${year}`;
-          } else if (year < currentYear - age && age != 0 && year != 0 ) {
-            document.getElementById("Display").innerHTML = `The year ${year} was ${currentYear - age - year} years before you were born`;
-          } else if (year > currentYear - age && year <= currentYear || year == currentYear - age && age != 0 && year != 0 ) {
-            document.getElementById("Display").innerHTML = `You were ${calAge} in the year ${year}`;
-          } else if (age ==0 || year == 0 ) {
-            document.getElementById("Display").innerHTML = 'Yo Need To Enter Values!';
-          } else {
-            document.getElementById("Display").innerHTML = 'Please insert a correct age and year!';
-          }
+        document.getElementById("mealCost").innerHTML = price;
+        document.getElementById("mealService").innerHTML = quality;
+        document.getElementById('mealTip').innerHTML = tip;
+        document.getElementById('totalMeal').innerHTML = total;
+    } else if (quality == 'Excellent') {
+        let total = +price +  (30/100 * +price);
+        let tip = 30/100* +price;
+        console.log(total);
+        console.log(quality);
+        console.log(tip);
 
-          
-}
+        document.getElementById("mealCost").innerHTML = price;
+        document.getElementById("mealService").innerHTML = quality;
+        document.getElementById('mealTip').innerHTML = tip;
+        document.getElementById('totalMeal').innerHTML = total;
+    } else {
+        let total = +price +  (18/100 * +price);
+        let tip = 18/100* +price;
+        console.log(total);
+        console.log(quality);
+        console.log(tip);
 
+        document.getElementById("mealCost").innerHTML = price;
+        document.getElementById("mealService").innerHTML = quality;
+        document.getElementById('mealTip').innerHTML = tip;
+        document.getElementById('totalMeal').innerHTML = total;
+    } ;
 
-
-// document.getElementById("myButton").onclick = function(age,year){
-
-//     let currentYear = 2023;
-
-//     age = document.getElementById("userAge").value;
-//     year = document.getElementById("year").value;
-
-//     console.log(age);
-
-
-//      let numYears = year - currentYear;
-//       let calAge = age + numYears;
     
-//       if (year > currentYear) {
-//         return `You will be ${calAge} in the year ${year}`;
-//       } else if (year < currentYear - age) {
-//         return `The year ${year} was ${currentYear - age - year} years before you were born`;
-//       } else if (year > currentYear - age && year < currentYear || year == currentYear - age ) {
-//         return `You were ${calAge} in the year ${year}`;
-//       } else {
-//         return 'Please insert a correct age and year!';
-//       }
-//     }
-
-
-
-
-
-
-
-
-
-
-
-
-// let currentYear = 2023;
-
-
-
-
-
-
-// function howOld(age, year) {
-//   let numYears = year - currentYear;
-//   let calAge = age + numYears;
-
-//   if (year > currentYear) {
-//     return `You will be ${calAge} in the year ${year}`;
-//   } else if (year < currentYear - age) {
-//     return `The year ${year} was ${currentYear - age - year} years before you were born`;
-//   } else if (year > currentYear - age && year < currentYear || year == currentYear - age ) {
-//     return `You were ${calAge} in the year ${year}`;
-//   } else {
-//     return 'Please insert a correct age and year!';
-//   }
-// }
-
-
-// console.log(howOld(41,1985 ))
+    
+    
+   
+}

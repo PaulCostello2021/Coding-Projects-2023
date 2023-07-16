@@ -4,33 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Age Checker</title>
-</head>
+    <title>Tip Calculator </title>
+    </head>
 <body>
-<script src="index.js" ></script>
+    <script src="index.js"></script>
 
-<h1 class="header">Calculate Your Age For That Year.</h1> 
+    <h1 class="Header"> Tip Calculator</h1>
 
-<div class="container">
+    <div class="input-container" >
 
-<div>
-    <br><br>
-<label for="userAge" > Enter Your Current Age:</label>
-<br>
-<input type="number" id="userAge" > <br> <br>
-<label for="year" > Enter a Year:</label><br>
-<input type="number" id="year" > <br><br>
-</div>
-<div>
-<button id="myButton" onclick="howOld()" > Submit</button> <br><br>
-</div>
-</div>
-
-
-<p id="Display">Result Will Show Here </p>
-
-
+        <label for="mealPrice"> Price Of Meal: &euro; </label>
+        <input type="number" id="mealPrice" value = 0>
+        <br><br>
+        <label for="serviceRating">Rate The Service: </label>
+        <select name="serviceRating" id="serviceRating">
+            <option value="start">Select a Rating</option>
+            <option value="Bad">Bad</option>
+            <option value="Ok">Ok</option>
+            <option value="Good">Good</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Fair">Fair</option>
+            
+        </select>
+      
    
+    </div>
+
+    <button id="myButton" onclick="tipCalculator()"  >Calculate Total Cost</button>
+
+    <div class="display" >
+
+        <p class="thankYou"> Thank You For Your Custom. </p>
+        <p class="thankYou"> Your Meal: &euro; <span id="mealCost">  0 </span> </p> 
+
+        <p class="thankYou"> Service: <span id="mealService"> Service </span> </p> 
+        <p class="thankYou"> Tip: &euro; <span id="mealTip"> Meal Tip </span> </p>
+        
+        <p class="thankYou"> Total Bill: &euro; <span id="total"> Total Bill </span> </p> 
+        
+        
+
+    </div>   
     
 </body>
 </html>
